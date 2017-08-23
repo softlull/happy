@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+   <div class="row">
+       {% for happy in happys %}
+       <div class="col-md-4">
+       	
+            <div class="happy panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ happy.name }}</h3>
+                    <a class="panel-username"
+                    	href="/user/{{happy.user.username}}/">
+                    	by {{ happy.user.username }}
+                    </a>
+                </div>
+                <div class="panel-body">
+                	<a href="/{{happy.id}}/">
+                     <div class="happy-photo">
+                         <img src="{{ happy.image.url }}" alt="" height="100" width="100" />
+                     </div>
+                     </a>
+					<button id ="likes" data-id="{{happy.id}}" class="btn btn-mini btn-danger glyphicon glyphicon-heart" type="button">
+						{% if happy.likes > 0 %} {{ happy.likes }} {% endif %}
+          			</button>
+                </div>
+            </div>
+       </div>
+       {% if forloop.counter|divisibleby:3 and not forloop.last %}
+       	</div><br><div class="row">
+       {% endif %}
+       {% endfor %}
+   </div><br>
+   
+   {% if user.is_authenticated %}
+   <div class="happy panel panel-default">
+   	<div class=panel-heading">
+   		<h3 class="panel-title">Add Happy</h3>
+   	</div>  
+   	<div class="panel-body">
+   	<!-- enctype="multipart/form-data" required when submitting via form -->
+    <form enctype="multipart/form-data" action="post_url/" method="post">
+     	{% csrf_token %}
+     	<div class="field-wrapper">
+     		{{ form.as_p }}
+     	</div>
+     	<input type="submit" value="Submit" />
+     </form>        	
+   	</div>
+  </div>
+  {% endif %}
+  {% endblock %}

@@ -1,0 +1,163 @@
+/* This would be bootstrap-custom.css */
+
+/* ----- Bootstrap Theme ----- */
+
+body {
+  background:  #fffff center;
+  background-image: url(../images/ice-cream-bunny.jpg);
+  background-repeat: repeat;
+  background-size: 20% auto;
+  color: #000000;
+}
+
+h1 {
+  margin-top: 0px;
+}
+.logo {
+	font-family: Century Gothic;
+	font-size: 96px;
+}
+
+.container {
+  max-width: 900px;
+  padding-top: 40px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.navbar-default {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.navbar-right {
+  margin-right: 5%;
+}
+
+.navbar-text {
+  font-size: 1.2em;
+  color: #000000;
+}
+
+.panel {
+  background: #ffffff;
+  border-color: #000000;
+  box-shadow: 0 1px 1px #000000;
+}
+
+.panel-default .panel-heading {
+  background: #ffffff;
+  border-color: #000000;
+}
+
+.panel-body {
+  position: relative;
+}
+
+.panel-title {
+  font-size: 1.5em;
+  color: #263d2c;
+}
+
+.panel-username {
+  margin-left: 10px;
+  font-size: 1.0em;
+  color: #263d2c;
+}
+
+/* ----- Custom Stuff ----- */
+
+.footer {
+  border-top: 0px solid #c6b397;
+  color: #d0b695;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+
+.treasure {
+  margin-bottom: 20px;
+}
+
+.treasure:last-child {
+  margin-bottom: 0;
+}
+
+.treasure-photo {
+  background: #fdf2e1;
+  float: left;
+  margin-right: 5%;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.treasure-photo-detail {
+  background: #fdf2e1;
+  float: left;
+  margin-right: 5%;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  width: 50%;
+}
+
+.treasure-photo img {
+  width: 180px;
+  max-height: 100%;
+}
+
+.treasure-table {
+  float: left;
+  margin-top: 10px;
+  width: 45%;
+}
+
+.treasure-table img {
+  margin-right: 10px;
+}
+
+.treasure-table tr {
+  border-bottom: 1px solid #ece4cf;
+}
+
+.treasure-table td,
+.treasure-table th {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  vertical-align: baseline;
+}
+
+.treasure-table th {
+  color: #e0ccb2;
+  white-space: nowrap;
+}
+
+.treasure-table td:last-child {
+  padding-left: 20px;
+  width: 100%;
+}
+
+.fieldWrapper{
+ font-size: 10px;
+ color: #263d2c;
+ font-family: verdana, tahoma, serif;
+ white-space:nowrap;
+ display:inline;
+}
+
+.btn {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 10px;
+}
